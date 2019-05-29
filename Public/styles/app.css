@@ -1,19 +1,90 @@
-body, html {
-	height: 100%;
-}
-
-body {
-	font-family: sans-serif;
-}
-
-div.welcome {
-	height: 100%;
-	text-align: center;
-}
-
-div.welcome img {
+.marquee {
+	width: 100%;
+	height: 75px;
+	/*margin: 25px auto;*/
+	overflow: hidden;
+	/*white-space: nowrap;*/
 	position: relative;
-  	top: 50%;
-  	transform: translateY(-50%);
-	width: 300px;
+	/*border: 1px solid #000;*/
+	/*margin: 25px auto;*/
+	/*box-sizing: border-box;*/
+
+	/*background-color: #85929E;*/
+	/*background-color: #005392;*/
+	background-color: #DA291C;
+
+	/*-webkit-border-radius: 5px;*/
+	/*border-radius: 5px;*/
+
+	/*-webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .5), 0px 1px 0px rgba(250, 250, 250, .2);*/
+	/*box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .5), 0px 1px 0px rgba(250, 250, 250, .2);*/
+
+}
+
+.marquee p {
+	position: absolute;
+	font-family: Calibri, Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	line-height: 75px;
+	text-align: center;
+	color: #fff;
+	/*text-shadow: 1px 1px 0px #000000;*/
+	/*filter: dropshadow(color=#000000, offx=1, offy=1);*/
+}
+
+.marquee p {
+  transform:translateX(100%);
+}
+
+.marquee p:nth-child(1) {
+  animation: left-one 30s ease infinite;
+}
+.marquee p:nth-child(2) {
+  animation: left-two 30s ease infinite;
+}
+
+
+/* Make it move */
+@keyframes left-one {
+  0%  {
+    transform:translateX(100%);
+  }
+  10% {
+    transform:translateX(0);
+  }
+  40% {
+    transform:translateX(0);
+  }
+  50% {
+    transform:translateX(-100%);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}
+
+@keyframes left-two {
+  0% {
+    transform:translateX(100%);
+  }
+  50% {
+    transform:translateX(100%);
+  }
+  60% {
+    transform:translateX(0);
+  }
+  90% {
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}
+
+.vText {
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+	float: left;
 }

@@ -1,0 +1,37 @@
+#set("title") { Login - BMP Porta }
+
+#set("body") {
+	<!-- <div class="container">
+		<div class="row">
+			<div class="u-full-width" style="display:table;height:600px">
+				<div style="display:table-cell;vertical-align:middle;text-align:center;">
+					<form class="" action="/login" method="post" enctype="application/x-www-form-urlencoded">
+						<input style="width:300px" type="email" name="email" placeholder="Email" id="email">
+						<br>
+						<input style="width:300px" type="password" name="password" placeholder="Password" id="password">
+						<br>
+						<button class="button" type="submit">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="container">
+		<div class="row">
+			<div class="u-full-width" style="display:table;height:600px">
+				<div style="display:table-cell;vertical-align:middle;text-align:center;">
+					<form id="loginForm" method="post" action="/login">
+						<input style="width:300px" type="email" name="email" placeholder="Email" id="email">
+						<br>
+						<input style="width:300px" type="password" name="password" placeholder="Password" id="password">
+						<br>
+						<input type="submit" name="submit" value="login">
+						<!-- <button class="button" type="submit">Login</button> -->
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+#embed("base")
