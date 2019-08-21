@@ -21,7 +21,7 @@
 				<form class="login100-form validate-form" action="dashboard" method="get">
 					<span class="login100-form-logo">
 						<!-- <i class="zmdi zmdi-landscape"></i> -->
-						<img src="images/Bapco-Emblem.png" alt="Bapco Emblem" width="45%" height="45%">
+						<img src="images/bapco-emblem.png" alt="Bapco Emblem" width="45%" height="45%">
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
