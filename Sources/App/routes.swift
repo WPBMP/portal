@@ -8,7 +8,7 @@ public func routes(_ router: Router) throws {
         return try req.view().render("login")
     }
     
-    router.get("portal") { (req) in
+    router.get("dashboard") { (req) in
         return try req.view().render("dashboard")
     }
     

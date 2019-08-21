@@ -5,20 +5,67 @@
 
   <title>#get(title)</title>
 
-  <link rel="stylesheet" href="/styles/app.css">
+  <!-- <link rel="stylesheet" href="/styles/app.css"> -->
+  <link rel="stylesheet" href="/styles/ticker.css">
   <!-- <link rel="stylesheet" href="/styles/skeleton.css">
   <link rel="stylesheet" href="/styles/skeletonx.css"> -->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <style media="screen">
+  .carousel .carousel-item {
+    transition-duration: 2s;
+  }
+  </style>
 
 </head>
 <body>
   #get(body)
 
   <script src="/js/jquery-3.3.1.slim.min.js"></script>
-  <script src="/js/popper.min.js"></script>
+  <!-- <script src="/js/popper.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.6.0"></script>
+
   <script>
+  Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+    align: 'top',
+    anchor: 'end',
+    offset: '4'
+  });
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["BMP", "TTSJV", "Total"],
+      datasets: [{
+        label: 'Man Hours without LTI',
+        data: [392010, 2242819, 2634829],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)'
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)'
+        ],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+      }
+    }
+  });
+  </script>
+  <!-- <script>
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
     type: 'bar',
@@ -56,8 +103,7 @@
       }
     }
   });
-  </script>
-
+  </script> -->
   <script>
   new Chart(document.getElementById("chartjs-0"),{
     "type":"line",
@@ -73,14 +119,14 @@
           "lineTension":0.1
         },{
           "label": "Non Lost Time",
-          "data": [100,85,60,50,35,15,0],
+          "data": [0,85,60,50,35,15,0],
           "fill": false,
           "borderColor":"rgb(61, 163, 232)",
           // "borderColor": window.chartColors.red,
           "lineTension":0.1
         },{
           "label": "First Aid",
-          "data": [20,20,20,25,20,20],
+          "data": [0,20,20,25,20,20],
           "fill": false,
           "borderColor":"rgb(254, 204, 96)",
           // "borderColor": window.chartColors.red,
@@ -153,7 +199,7 @@
     }
   }, 1000);
   </script>
-  <script>
+  <!-- <script>
   // Set the date we're counting down to
   var countDownDateSitra = new Date("Jun 26, 2020 00:00:00").getTime();
 
@@ -182,7 +228,7 @@
       document.getElementById("SitraTimer").innerHTML = "EXPIRED";
     }
   }, 1000);
-  </script>
+  </script> -->
   <script>
   // Set the date we're counting down to
   var countDownDatePAC = new Date("Apr 26, 2022 00:00:00").getTime();

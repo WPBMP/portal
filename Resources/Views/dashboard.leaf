@@ -2,11 +2,20 @@
 
 #set("body") {
 
-	<div class="row">
+	<!-- <div class="row">
 		<div class="marquee">
 			<p>This is a random text to test the working of <strong>MARQUEE</strong> effect using <strong>CSS Animation</strong>.</p>
 			<p>Seems like the <strong>MARQUEE</strong> effect is working without any problem, but will need to rework the keyframe animation in order to have more that 2 snippets. </p>
 		</div>
+	</div> -->
+	<div id="ticker">
+		<ul >
+			<li>ENSURE FAMILIARITY WITH WORKSITES</li>
+			<li>CONSISTENT HOUSEKEEPING</li>
+			<li>PROVIDE CLEAR VISUAL COMMUNICATION</li>
+			<li>REASSESS SAFETY SIGNAGE WHEN PROJECTS SHIFT</li>
+			<li>REMEMBER YOUR STOP WORK AUTHORITY<li>
+		</ul>
 	</div>
 
 	<div class="container-fluid" style="margin-top: 25px">
@@ -16,14 +25,14 @@
 					<canvas id="chartjs-0" class="chartjs" width="400" height="200"></canvas>
 				</div>
 				<div class="card" style="width: 400; margin-top: 15px">
-					<div id="carouselExampleSlidesOnly text-center" class="carousel slide" data-ride="carousel">
+					<div id="carouselExampleSlidesOnly text-center" class="carousel slide" data-ride="carousel" data-interval="10000" >
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<!-- <canvas id="chartjs-0" class="chartjs" width="400" height="200"></canvas> -->
 								<canvas id="myChart" width="400" height="200"></canvas>
 							</div>
 							<div class="carousel-item">
-								<canvas id="chartjs-1" class="chartjs" width="400" height="200"></canvas>
+								<canvas id="chartjs-1" class="chartjs" width="auto" height="auto"></canvas>
 							</div>
 							<div class="carousel-item">
 								<canvas id="chartjs-2" class="chartjs" width="400" height="200"></canvas>
@@ -36,11 +45,12 @@
 					<div class="card-header text-white pl-0 pr-0" style="background-color: #000;">
 						EWA
 					</div>
-					<div class="card-body pl-0 pr-0">
+					<div class="card-body p-2">
 						<!-- <h5>EWA SS Online</h5> -->
 						<!-- <h5>EWA</h5> -->
 						<!-- <h6 id="ESSTimer" class="card-title"></h6> -->
-						<p id="ESSTimer"></p>
+						<h5 class="m-0" id="ESSTimer" class="card-title"></h5>
+						<!-- <p class="m" id="ESSTimer"></p> -->
 					</div>
 				</div>
 				<!-- <div class="card text-center" style="margin-top: 15px;">
@@ -57,8 +67,8 @@
 					<div class="card-header text-white" style="background-color: #000;">
 						Provisional Acceptance Certificate
 					</div>
-					<div class="card-body">
-						<h5 id="PACTimer" class="card-title"></h5>
+					<div class="card-body p-2">
+						<h5 class="m-0" id="PACTimer" class="card-title"></h5>
 					</div>
 				</div>
 			</div>
